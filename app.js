@@ -63,10 +63,12 @@ const saveBookToLocalStorage = (book) => {
 
 (() => {
     const books = JSON.parse(localStorage.getItem("books"));
-    books.forEach((book) => {
-        createRow(book.title, book.author, book.priority, book.category);
-    })
-})(); 
+    if (books.length > 0) {
+        books.forEach((book) => {
+            createRow(book.title, book.author, book.priority, book.category);
+        })
+    }
+})();
 
 
 const addToTable = event => {
