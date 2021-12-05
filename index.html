@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Biblioteka</title>
+</head>
+<body>
+    <main class="container">
+        <div></div>
+        <form class="form">
+            <div class="form__field">
+                <label class="form__label" for="title">Tytuł książki</label>
+                <input type="text" class="form__input title" id="title"/>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="author">Autor książki</label>
+                <input type="text" class="form__input author" id="author"/>
+            </div>
+            <div class="form__field form__field--checkbox">
+                <label class="form__label">Priorytet przeczytania</label>
+                <label class="checkbox">
+                    <input type="radio" class=" priority" name="priority" value="1">
+                    <span></span>
+                    1
+                </label>
+                <label class="checkbox">
+                    <input type="radio" class=" priority" name="priority" value="2">
+                    <span></span>
+                    2
+                </label>
+                <label class="checkbox">
+                    <input type="radio" class="priority" name="priority" value="3">
+                    <span></span>
+                    3
+                </label>
+                <label class="checkbox">
+                    <input type="radio" class="priority" name="priority" value="4">
+                    <span></span>
+                    4
+                </label>
+                <label class="checkbox">
+                    <input type="radio" class="priority" name="priority" value="5">
+                    <span></span>
+                    5
+                </label>
+            </div>
+            <div class="form__field form__field--checkbox">
+                <label class="form__label">Kategoria</label>
+                <label class="checkbox">
+                    <input type="radio" class="category" name="category" value=" kryminał, sensacja, thriller">
+                    <span></span>
+                    kryminał, sensacja, thriller
+                </label>
+                <label class="checkbox">
+                    <input type="radio" class="category" name="category" value=" fantasy, science fiction">
+                    <span></span>
+                    fantasy, science fiction
+                </label>
+                <label class="checkbox">
+                    <input type="radio" class="category" name="category" value=" reportaż">
+                    <span></span>
+                    reportaż
+                </label>
+            </div>
+            <button type="submit" class="btn">Wyślij</button>
+        </form>
+        <div id="result">
+            <table class="tab">
+                <thead class="tab__head">
+                    <tr>
+                        <th class="tab__head_d">Tytuł</th>
+                        <th class="tab__head_d">Autor</th>
+                        <th class="tab__head_d">Priorytet przeczytania</th>
+                        <th class="tab__head_d">Kategoria</th>
+                    </tr>
+                </thead>
+                <tbody class="tab__body">
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+<script src="app.js"></script>
+</html>
