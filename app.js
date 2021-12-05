@@ -63,7 +63,7 @@ const saveBookToLocalStorage = (book) => {
 
 (() => {
     const books = JSON.parse(localStorage.getItem("books"));
-    if (books.length > 0) {
+    if (books) {
         books.forEach((book) => {
             createRow(book.title, book.author, book.priority, book.category);
         })
